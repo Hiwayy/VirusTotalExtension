@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "VirusTotal URL Scanner Simple",
+    "version": "1.0",
+    "description": "Scanne les URLs avec VirusTotal",
+    "permissions": ["activeTab", "storage", "tabs"],
+    "host_permissions": [
+      "https://www.virustotal.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }

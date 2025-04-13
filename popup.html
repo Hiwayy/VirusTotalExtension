@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scanner URL VirusTotal</title>
+  <style>
+    body { width: 350px; padding: 10px; font-family: Arial, sans-serif; }
+    input { width: 100%; margin: 5px 0; padding: 5px; }
+    button { padding: 8px; margin: 5px 0; background-color: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #3367d6; }
+    #result { margin-top: 10px; border: 1px solid #ddd; padding: 10px; border-radius: 4px; }
+    #console-output { 
+      margin-top: 15px;
+      border: 1px solid #333;
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    .log-title {
+      font-weight: bold;
+      margin-top: 5px;
+      color: #333;
+    }
+    .log-entry {
+      margin: 3px 0;
+      padding-left: 10px;
+      border-left: 3px solid #ccc;
+    }
+    .log-separator {
+      border-top: 1px dashed #ccc;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>Scanner URL avec VirusTotal</h3>
+  <input type="text" id="apiKey" placeholder="Votre clé API VirusTotal">
+  <button id="save">Sauvegarder</button>
+  <button id="scan">Scanner URL actuelle</button>
+  <div id="result"></div>
+  
+  <div id="console-output" style="display: none;">
+    <div class="log-title">Analyse détaillée :</div>
+    <div id="log-content"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
